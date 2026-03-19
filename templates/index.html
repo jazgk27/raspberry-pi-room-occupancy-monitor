@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate and Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .message {
+            font-size: 24px;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        button[name="task"][value="Occupied"] {
+            background-color: #f44336; /* rojo */
+        }
+        button[name="task"][value="Open"] {
+            background-color: #4caf50; /* verde */
+        }
+        button[name="task"][value="Duration"] {
+            background-color: #2196f3; /* azul */
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exam Booth Status</h1>
+
+    {% if message_text %}
+        <div class="message">{{ message_text }}</div>
+    {% endif %}
+
+    <form method="POST" action="/automate">
+        <button type="submit" name="task" value="Occupied">Occupied<br>(Red LED on, Green off, Start Timer)</button>
+        <button type="submit" name="task" value="Open">Open<br>(Red LED off, Green on, Stop Timer)</button>
+        <button type="submit" name="task" value="Duration">Check Duration</button>
+    </form>
+</body>
+</html>
