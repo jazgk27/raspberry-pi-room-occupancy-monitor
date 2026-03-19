@@ -21,6 +21,7 @@ Simple web application using Flask and gpiozero to control two LEDs (red/green) 
 
 ## How to Run
 1. Install dependencies:  
+   ``bash
    pip install flask gpiozero
 2. Connect LEDs:
 - Red LED: GPIO 4
@@ -41,20 +42,6 @@ Simple web application using Flask and gpiozero to control two LEDs (red/green) 
 - State management and timers
 - Form handling (POST requests)
 - Basic error checking and user feedback
-
-## Screenshots
-
-**Web Interface:**
-![Web Interface](app interface.jpg)
-
-**Circuit Setup:**
-![Circuit Setup](circuit diagram.jpg)
-
-**Occupied State (Red LED on):**
-![Occupied LEDs](led occupied.jpg)
-
-**Open State (Green LED on):**
-![Open LEDs](led open.jpg)
 
 Class assignment from Associate in Science in Computer Programming – Palm Beach State College.
 Feedback welcome!
