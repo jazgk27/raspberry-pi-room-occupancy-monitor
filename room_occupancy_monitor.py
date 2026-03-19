@@ -1,5 +1,7 @@
-#app.py
-#Jazmin GK 04/02/2025 
+# IoT Room Occupancy Monitor
+# Jazmin GK - April 2025
+# Controls LEDs and tracks duration between Occupied and Open states
+
 from flask import Flask, render_template, request
 from gpiozero import LED
 from time import time
